@@ -1,0 +1,33 @@
+{extend name="admin/public/base"/}
+{block name="body"}
+<div class="box box-primary">
+	<div class="box-header with-border">
+		<h3 class="box-title">{$meta_title}</h3>
+	</div>
+	<div class="box-body">
+		<form method="post" class="form form-horizontal" role="form">
+			<div class="form-group">
+				<label class="col-lg-2 control-label">域名</label>
+				<div class="col-lg-6">
+					<textarea class="form-control" name="domain" data-rule="required"></textarea>
+					<span class="help-block"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-lg-2 control-label">过期时间</label>
+				<div class="col-lg-6">
+					{:form(['name' => 'expire_at', 'type' => 'datetime'], [])}
+					<span class="help-block"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-offset-2 col-lg-10">
+					<input type="hidden" name="id" value="{$info.id|default=''}">
+					<button class="btn btn-success submit-btn" type="submit">确 定</button>
+					<button class="btn btn-danger btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+{/block}

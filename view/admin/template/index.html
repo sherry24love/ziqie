@@ -1,0 +1,39 @@
+{extend name="admin/public/base"/}
+{block name="body"}
+<div class="box box-primary">
+	<div class="box-header with-border">
+		<h3 class="box-title">{$meta_title}</h3>
+		<div class="box-tools pull-right"></div>
+	</div>
+	<div class="box-body">
+		<div class="table-responsive clearfix">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th width="30"><input class="checkbox check-all" type="checkbox"></th>
+						<th width="180">名称</th>
+						<th width="180">文件</th>
+						<th width="140">大小</th>
+						<th width="180">创建时间</th>
+						<th width="180">更新时间</th>
+						<!-- <th>操作</th> -->
+					</tr>
+				</thead>
+				<tbody>
+					{volist name="list" id="item"}
+					<tr>
+						<td><input class="ids row-selected" type="checkbox" name="id[]" value="{$item['id']}"></td>
+						<th width="180">{$item['title']}</th>
+						<th width="180">{$item['name']}</th>
+						<th width="140">{$item['size']}</th>
+						<th width="180">{$item['create_time']|date="Y-m-d H:i:s"}</th>
+						<th width="180">{$item['update_time']|date="Y-m-d H:i:s"}</th>
+						<!-- <th>操作</th> -->
+					</tr>
+					{/volist}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{/block}

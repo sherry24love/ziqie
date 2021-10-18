@@ -1,0 +1,2469 @@
+.cbc-caffeine-container {
+    font-family: sans-serif;
+    position: relative;
+    width: 100%;
+    overflow: hidden
+}
+
+.cbc-caffeine-container:focus {
+    outline: none
+}
+
+.cbc-caffeine-container .cbc-caffeine-ads-container.advertisement {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: none
+}
+
+[data-status^="advertising"].cbc-caffeine-container .cbc-caffeine-ads-container.advertisement {
+    display: block
+}
+
+.cbc-caffeine-container .cbc-caffeine-ads-container.advertisement.is-audio {
+    height: 24px !important
+}
+
+.cbc-caffeine-container .cbc-caffeine-ads-container.advertisement.is-audio .ads-video-player {
+    display: none
+}
+
+.cbc-caffeine-container .cbc-caffeine-ads-container.advertisement .cbc-caffeine-ads-innercontainer {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.cbc-caffeine-container .cbc-caffeine-ads-container.advertisement .ads-video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.cbc-caffeine-container .cbc-caffeine-ads-container.advertisement .ads-video-player iframe {
+    z-index: 1
+}
+
+.cbc-caffeine-container .cbc-caffeine-ads-container.advertisement .ads-video-player video {
+    width: 100%;
+    height: 100%
+}
+
+.cbc-caffeine-container .cbc-caffeine-ads-container.advertisement.ima .ads-video-player {
+    background-color: #f0f0f0
+}
+
+.cbc-caffeine-container .cbc-caffeine-ads-container.advertisement .ads-message {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 4px;
+    height: 24px;
+    line-height: 24px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.cbc-caffeine-container .cbc-caffeine-ads-container.advertisement .ads-close {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 8px 0 4px;
+    border: none;
+    line-height: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px
+}
+
+.cbc-caffeine-container .cbc-caffeine-ads-container.advertisement .ads-close svg {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin: 3px 3px 0 0
+}
+
+.cbc-caffeine-container .cbc-caffeine-ads-container.advertisement .ads-close:hover, .cbc-caffeine-container .cbc-caffeine-ads-container.advertisement .ads-close:focus {
+    background-color: rgba(201, 44, 60, 0.75)
+}
+
+.cbc-caffeine-container.caffeine-small .advertisement .ads-message .message-text {
+    display: none
+}
+
+.cbc-caffeine-container[data-status^="advertising"] .ui .seekprogress {
+    opacity: .4
+}
+
+.cbc-caffeine-container *::-webkit-media-controls-panel {
+    display: none !important;
+    -webkit-appearance: none
+}
+
+.cbc-caffeine-container *::--webkit-media-controls-play-button {
+    display: none !important;
+    -webkit-appearance: none
+}
+
+.cbc-caffeine-container *::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none
+}
+
+.cbc-caffeine-container[data-status="ready"] .playbackelement {
+    display: none
+}
+
+.cbc-caffeine-container[data-status="loading"] .loading {
+    display: block
+}
+
+.cbc-caffeine-container[data-status^="advertising"] .advertisement {
+    display: block
+}
+
+.cbc-caffeine-container .loading {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: background-color .33s
+}
+
+.cbc-caffeine-container .loading::before, .cbc-caffeine-container .loading::after {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 50%;
+    content: ''
+}
+
+.cbc-caffeine-container .loading::before {
+    animation: loading-animation 1.15s ease-in-out infinite;
+    -o-animation: loading-animation 1.15s ease-in-out infinite;
+    -ms-animation: loading-animation 1.15s ease-in-out infinite;
+    -webkit-animation: loading-animation 1.15s ease-in-out infinite;
+    -moz-animation: loading-animation 1.15s ease-in-out infinite
+}
+
+.cbc-caffeine-container .loading::after {
+    animation: loading-animation 1.15s ease-in-out .58s infinite;
+    -o-animation: loading-animation 1.15s ease-in-out .58s infinite;
+    -ms-animation: loading-animation 1.15s ease-in-out .58s infinite;
+    -webkit-animation: loading-animation 1.15s ease-in-out .58s infinite;
+    -moz-animation: loading-animation 1.15s ease-in-out .58s infinite
+}
+
+@keyframes loading-animation {
+    70% {
+        transform: scale(.5)
+    }
+}
+
+@-o-keyframes loading-animation {
+    70% {
+        -o-transform: scale(.5)
+    }
+}
+
+@-ms-keyframes loading-animation {
+    70% {
+        -ms-transform: scale(.5)
+    }
+}
+
+@-webkit-keyframes loading-animation {
+    70% {
+        -webkit-transform: scale(.5)
+    }
+}
+
+@-moz-keyframes loading-animation {
+    70% {
+        -moz-transform: scale(.5)
+    }
+}
+
+.cbc-caffeine-container .ui button {
+    float: left;
+    color: #616161;
+    padding: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 40px;
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    cursor: pointer
+}
+
+.cbc-caffeine-container .ui button::-moz-focus-inner {
+    border: none
+}
+
+.cbc-caffeine-container .ui button:focus {
+    outline: 1px dotted #616161
+}
+
+.cbc-caffeine-container .ui button:focus span {
+    display: block;
+    position: absolute;
+    background: #fff;
+    height: auto;
+    font-size: .75rem;
+    font-weight: 300;
+    top: -1.4rem;
+    white-space: nowrap;
+    width: auto;
+    padding: .2rem;
+    text-transform: none;
+    z-index: 5;
+    visibility: visible;
+    -moz-animation: tooltipAnimation 0s ease-in 4s forwards;
+    -webkit-animation: tooltipAnimation 0s ease-in 4s forwards;
+    -o-animation: tooltipAnimation 0s ease-in 4s forwards;
+    animation: tooltipAnimation 0s ease-in 4s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+.cbc-caffeine-container .ui button span {
+    display: none
+}
+
+@keyframes tooltipAnimation {
+    to {
+        width: 0;
+        height: 0;
+        visibility: hidden
+    }
+}
+
+.cbc-caffeine-container .ui button.dock:focus span, .cbc-caffeine-container .ui button.fullscreen:focus span {
+    right: 0
+}
+
+.cbc-caffeine-container .ui button:disabled .foreground {
+    fill: #616161
+}
+
+.cbc-caffeine-container .ui button.unavailable {
+    display: none
+}
+
+.cbc-caffeine-container .ui button svg {
+    max-width: 40px;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.cbc-caffeine-container .ui button svg .background {
+    fill: transparent
+}
+
+.cbc-caffeine-container .ui .extras .duration:before {
+    content: ' / '
+}
+
+.cbc-caffeine-container .playbackelement::before {
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 100%;
+    line-height: 15px;
+    z-index: 1;
+    padding: 5px;
+    transition: 1s top;
+    animation: unreliablePlayback 1s linear infinite;
+    background: repeating-linear-gradient(45deg, rgba(75, 0, 0, 0.9), rgba(75, 0, 0, 0.9) 10px, rgba(10, 0, 0, 0.9) 10px, rgba(10, 0, 0, 0.9) 20px)
+}
+
+@keyframes unreliablePlayback {
+    from {
+        background-position: -56px 0
+    }
+    to {
+        background-position: 0 0
+    }
+}
+
+.cbc-caffeine-container .playbackelement.playback-unreliable::before {
+    top: 0;
+    content: "Trying to reconnect…"
+}
+
+.cbc-caffeine-container .caffeine-overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    overflow: hidden;
+    display: none;
+    animation: caffeineOverlay .2s ease-in 1 reverse
+}
+
+.cbc-caffeine-container .caffeine-overlay.active {
+    animation: caffeineOverlay .2s ease-out 1 normal;
+    display: block
+}
+
+.cbc-caffeine-container .caffeine-overlay.playbackstats {
+    background: white
+}
+
+.cbc-caffeine-container .caffeine-overlay .close-button {
+    display: block;
+    -webkit-appearance: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2%;
+    border: 0;
+    padding: 4px;
+    z-index: 1;
+    border-radius: 16px;
+    background-color: #fff
+}
+
+.cbc-caffeine-container .caffeine-overlay .close-button svg, .cbc-caffeine-container .caffeine-overlay .close-button label {
+    display: inline;
+    vertical-align: middle
+}
+
+.cbc-caffeine-container .caffeine-overlay .close-button svg {
+    width: 24px;
+    height: 24px
+}
+
+.cbc-caffeine-container .caffeine-overlay .close-button svg path {
+    fill: #263238
+}
+
+.cbc-caffeine-container .caffeine-overlay .close-button label {
+    display: none;
+    color: #263238;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-transform: uppercase
+}
+
+.cbc-caffeine-container .caffeine-overlay .close-button:hover, .cbc-caffeine-container .caffeine-overlay .close-button:focus {
+    cursor: pointer
+}
+
+.cbc-caffeine-container .caffeine-overlay .close-button:hover label, .cbc-caffeine-container .caffeine-overlay .close-button:focus label {
+    display: inline
+}
+
+.cbc-caffeine-container .caffeine-overlay .caffeine-overlay-content {
+    color: #212121;
+    height: 100%
+}
+
+.cbc-caffeine-container .caffeine-overlay .caffeine-overlay-content span {
+    color: #212121
+}
+
+.cbc-caffeine-container .caffeine-overlay .caffeine-overlay-content code {
+    white-space: nowrap
+}
+
+.cbc-caffeine-container .caffeine-overlay .eventsLog {
+    width: 90%
+}
+
+.cbc-caffeine-container .caffeine-overlay button[name="getEvents"] {
+    margin: 0
+}
+
+@keyframes caffeineOverlay {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] {
+    min-height: 166px;
+    font-size: 14px;
+    color: #616161;
+    background-color: #e8e8e8
+}
+
+.cbc-caffeine-container[data-player="barista-audio"][data-status="loading"] .ui .controls {
+    display: none
+}
+
+.cbc-caffeine-container[data-player="barista-audio"][data-status="playing"] .buffer {
+    animation: animatedbuffer 1s linear infinite
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .indicate-play, .cbc-caffeine-container[data-player="barista-audio"] .indicate-pause, .cbc-caffeine-container[data-player="barista-audio"] .indicate-stop, .cbc-caffeine-container[data-player="barista-audio"] .indicate-volume, .cbc-caffeine-container[data-player="barista-audio"] .indicate-skip-forward, .cbc-caffeine-container[data-player="barista-audio"] .indicate-skip-back {
+    display: none
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .advertisement {
+    position: relative
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player {
+    box-sizing: border-box;
+    padding: 10px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .placeholder {
+    display: none
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .poster {
+    display: none
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .loading {
+    box-sizing: border-box;
+    padding: 10px 20px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .loading::before, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .loading::after {
+    margin-top: 73px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .loading::before {
+    background-color: #004890
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .loading::after {
+    background-color: #c61726
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .showinfo {
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 50px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .showinfo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .showinfo .showname {
+    box-sizing: border-box;
+    font-size: 16px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .showinfo .title {
+    color: #222;
+    font-size: 18px;
+    box-sizing: border-box
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .controls button, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .extras button {
+    margin: 0;
+    height: 60px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .controls button:hover svg .foreground, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .extras button:hover svg .foreground, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .controls button:focus svg .foreground, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .extras button:focus svg .foreground {
+    fill: #000
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .controls button:hover span, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .extras button:hover span, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .controls button:focus span, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .extras button:focus span {
+    top: 9rem
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .controls button:hover.unmuted span, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .extras button:hover.unmuted span, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .controls button:focus.unmuted span, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .extras button:focus.unmuted span {
+    top: 3.6rem
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .controls button svg .foreground, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .extras button svg .foreground {
+    fill: #262626
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .controls {
+    clear: both;
+    float: left;
+    padding: 10px 0
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .extras {
+    float: right;
+    padding: 10px 0;
+    line-height: 55px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .extras .timeinfo {
+    white-space: nowrap
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .extras .timeinfo, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .extras .share {
+    float: left;
+    height: 60px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .extras .fullscreen {
+    display: none
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress {
+    position: relative;
+    clear: both;
+    padding: 10px 0;
+    height: 6px;
+    background-color: transparent
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .timeline, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .infinite-buffer, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .buffer, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .playback, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .seek {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    border: none;
+    background: transparent;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .timeline::-webkit-progress-bar, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .infinite-buffer::-webkit-progress-bar, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .buffer::-webkit-progress-bar, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .playback::-webkit-progress-bar, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .seek::-webkit-progress-bar {
+    background: transparent
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .timeline::-moz-progress-bar, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .infinite-buffer::-moz-progress-bar, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .buffer::-moz-progress-bar, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .playback::-moz-progress-bar, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .seek::-moz-progress-bar {
+    background: transparent
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress .timeline {
+    background-color: #454545
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress progress.buffer {
+    color: #aaa
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress progress.buffer::-webkit-progress-value {
+    background-color: #aaa
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress progress.buffer::-moz-progress-bar {
+    background-color: #aaa
+}
+
+[data-type="live"].cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress progress.playback {
+    display: none
+}
+
+[data-type="live"].cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress progress.buffer {
+    background: repeating-linear-gradient(45deg, rgba(71, 89, 99, 0.5), rgba(71, 89, 99, 0.5) 10px, #576d7b 10px, #576d7b 20px)
+}
+
+[data-type="live"].cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress progress.buffer::-webkit-progress-value {
+    background: none
+}
+
+[data-type="live"].cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress progress.buffer::-moz-progress-bar {
+    background: none
+}
+
+[data-type="live"].cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress progress.buffer::-ms-fill {
+    background: none;
+    animation-name: none
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress progress.playback {
+    color: #c92c3c
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress progress.playback::-webkit-progress-value {
+    background-color: #c92c3c
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress progress.playback::-moz-progress-bar {
+    background-color: #c92c3c
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .seekprogress input.seek {
+    height: 100%;
+    top: 0
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui input[type=range]:focus {
+    outline-color: #262626
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui input[type=range]::-ms-track {
+    border: none;
+    background: transparent none;
+    color: transparent
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui input[type=range]::-ms-thumb {
+    width: 16px;
+    height: 16px;
+    background-color: #eee;
+    border: 1px solid #454545;
+    border-radius: 8px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .volume-controls {
+    float: left;
+    position: relative
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .volume-controls .volume-slider-container {
+    visibility: hidden;
+    overflow: hidden;
+    position: absolute;
+    top: -1px;
+    left: 40px;
+    width: 0;
+    height: 60px;
+    padding-right: 10px;
+    transition: width .25s;
+    border: 1px solid #999;
+    border-left: none;
+    background-color: #fff;
+    box-shadow: 2px 1px 0 rgba(0, 0, 0, 0.5)
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .volume-controls .volume-slider-container .volume-slider {
+    width: 125px;
+    height: 60px;
+    padding: 0 5px 0 2px;
+    margin: 0 0 0 1px;
+    background-color: transparent
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .volume-controls .volume-slider-container .volume-slider::-ms-track {
+    height: 5px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .volume-controls .volume-slider-container .volume-slider::-ms-fill-lower, .cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .volume-controls .volume-slider-container .volume-slider::-ms-fill-upper {
+    background: #666
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .volume-controls .volume-slider-container .volume-slider::-moz-range-track {
+    background: #666
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .volume-controls.active {
+    background-color: #fff;
+    border: 1px solid #999;
+    border-right: none;
+    box-shadow: 2px 1px 0 rgba(0, 0, 0, 0.5);
+    width: 39px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .cbc-caffeine-player .ui .volume-controls.active .volume-slider-container {
+    width: 125px;
+    visibility: visible
+}
+
+@keyframes animatedbuffer {
+    from {
+        background-position: -56px 0
+    }
+    to {
+        background-position: 0 0
+    }
+}
+
+.cbc-caffeine-container menu {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    margin: 0;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px #000
+}
+
+.cbc-caffeine-container menu.active {
+    display: block
+}
+
+.cbc-caffeine-container menu menuitem {
+    display: block;
+    cursor: default;
+    color: #333;
+    font-size: 0
+}
+
+.cbc-caffeine-container menu menuitem button {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    border: 0;
+    background: none;
+    text-align: left;
+    font-size: medium
+}
+
+.cbc-caffeine-container menu menuitem button:hover, .cbc-caffeine-container menu menuitem button:focus {
+    background-color: #ccc
+}
+
+.cbc-caffeine-container menu menuitem.version {
+    padding: 5px;
+    font-size: small;
+    color: #666
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent .share-wrapper {
+    padding-top: 10%
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent h1 {
+    font-weight: bold;
+    font-size: calc(1em + 1vw);
+    color: #fff;
+    margin: 0 0 4% 0;
+    text-align: center
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent li {
+    display: inline-block;
+    width: 20%;
+    margin: 0;
+    flex: auto
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent li button {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    pointer-events: visible;
+    cursor: pointer
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent li button div.icon-wrapper {
+    width: 100%;
+    pointer-events: none
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent li button div.icon-wrapper svg {
+    max-width: 70px;
+    max-height: 70px
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent li button:hover, .cbc-caffeine-container .cbc-caffeine-player .sharecontent li button:focus {
+    outline: none
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent li button:hover svg circle, .cbc-caffeine-container .cbc-caffeine-player .sharecontent li button:focus svg circle {
+    fill: #2b2b2b
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent li button.active + .sharedialog {
+    display: block;
+    z-index: 1;
+    -webkit-animation-duration: .25s;
+    animation-duration: .25s;
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent li .sharedialog {
+    display: none;
+    position: absolute;
+    left: 10%;
+    top: 70%;
+    width: 80%
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent li input {
+    padding: 2%;
+    font-size: calc(.65em + .4vw)
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent li input[type=button] {
+    position: absolute;
+    right: 0;
+    border-radius: 3px;
+    border: 1px solid #737373;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    width: 15%
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent li input[type=text] {
+    width: 77%;
+    float: left;
+    text-overflow: ellipsis;
+    border-radius: 3px;
+    border: 1px solid #979797
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .sharecontent li .title {
+    display: inline;
+    background-color: unset;
+    outline: none;
+    position: relative;
+    padding: unset;
+    box-shadow: unset;
+    line-height: 3em;
+    font-weight: bold;
+    color: #fff;
+    font-size: calc(.65em + .4vw);
+    left: auto
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .sharecontent .share-wrapper {
+    padding-top: 1%
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .sharecontent h1 {
+    font-size: calc(.8em + .8vw);
+    margin: 0 0 2% 0
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .sharecontent li button div.icon-wrapper > svg {
+    max-width: 40px;
+    max-height: 40px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .sharecontent li label {
+    top: 65%
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .sharecontent li input {
+    padding: 1%;
+    font-size: 14px
+}
+
+.cbc-caffeine-container[data-player="barista-audio"] .sharecontent li .title {
+    line-height: 1em
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        visibility: visible
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%);
+        visibility: visible
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes slideOut {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    100% {
+        visibility: hidden;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%)
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+    }
+    100% {
+        visibility: hidden;
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%)
+    }
+}
+
+.cbc-caffeine-container[data-status^="advertising"] .cbc-caffeine-annotation {
+    display: none
+}
+
+.cbc-caffeine-container .cbc-caffeine-annotation {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    left: unset;
+    width: 75%;
+    height: auto;
+    overflow: visible;
+    z-index: 1;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid #585858;
+    box-shadow: 7px 7px 6px 0 rgba(0, 0, 0, 0.5)
+}
+
+.cbc-caffeine-container .cbc-caffeine-annotation span {
+    float: left;
+    color: #585858;
+    padding-right: 5px
+}
+
+.cbc-caffeine-container .cbc-caffeine-annotation .close-button {
+    display: block;
+    -webkit-appearance: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2%;
+    border: 0;
+    padding: 4px;
+    z-index: 1;
+    border-radius: 16px;
+    background-color: #fff;
+    top: -8px;
+    right: -8px;
+    margin: 0
+}
+
+.cbc-caffeine-container .cbc-caffeine-annotation .close-button svg, .cbc-caffeine-container .cbc-caffeine-annotation .close-button label {
+    display: inline;
+    vertical-align: middle
+}
+
+.cbc-caffeine-container .cbc-caffeine-annotation .close-button svg {
+    width: 24px;
+    height: 24px
+}
+
+.cbc-caffeine-container .cbc-caffeine-annotation .close-button svg path {
+    fill: #263238
+}
+
+.cbc-caffeine-container .cbc-caffeine-annotation .close-button label {
+    display: none;
+    color: #263238;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-transform: uppercase
+}
+
+.cbc-caffeine-container .cbc-caffeine-annotation .close-button:hover, .cbc-caffeine-container .cbc-caffeine-annotation .close-button:focus {
+    cursor: pointer
+}
+
+.cbc-caffeine-container .cbc-caffeine-annotation .close-button:hover label, .cbc-caffeine-container .cbc-caffeine-annotation .close-button:focus label {
+    display: inline
+}
+
+@media (max-width: 500px) {
+    .cbc-caffeine-container .cbc-caffeine-annotation {
+        width: calc(100% - 18px);
+        top: 10px;
+        right: 10px
+    }
+}
+
+.cbc-caffeine-container.docked .cbc-caffeine-player .caffeine-overlay.active.recommendationcontent {
+    display: none
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendationcontent .caffeine-overlay-content {
+    background-color: #000000
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations {
+    display: block;
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations h2 {
+    width: 100%;
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items {
+    width: 100%;
+    height: calc(100% - 25px);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items li.recommended-item:nth-child(2) {
+    display: none
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items.loaded .recommended-item {
+    -webkit-animation-name: caffeineOverlayEntrance;
+    animation-name: caffeineOverlayEntrance
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item {
+    width: 100%;
+    background: transparent;
+    cursor: pointer;
+    margin: 0;
+    padding: 11% 0;
+    box-sizing: border-box;
+    -webkit-animation-duration: .25s;
+    animation-duration: .25s;
+    -webkit-animation-name: caffeineOverlayExit;
+    animation-name: caffeineOverlayExit
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link {
+    position: relative;
+    background-color: rgba(20, 20, 20, 0.7);
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    width: 40%;
+    border: 1px solid #979797
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link:focus, .cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link:focus-within, .cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link:hover {
+    border: 1px solid #E60505
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link:focus button svg .foreground, .cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link:focus-within button svg .foreground, .cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link:hover button svg .foreground {
+    fill: #E60505
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link img {
+    width: 100%;
+    display: block
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link .recommended-item-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2%
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link button {
+    display: block;
+    float: left;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+    cursor: pointer
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link button svg {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link button svg .foreground {
+    fill: #000
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link button svg .background {
+    fill: #fff
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link button::-moz-focus-inner {
+    border: 0
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link .recommended-item-duration {
+    float: right;
+    background-color: rgba(20, 20, 20, 0.7);
+    color: #FFF;
+    padding: 2px 4px;
+    font-size: 1rem;
+    height: 23px;
+    margin: 12px 0 0 0;
+    line-height: 21px;
+    box-sizing: border-box;
+    border-radius: 3px
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-link .recommended-item-cc {
+    background-color: #FFF;
+    color: #000;
+    border-radius: 4px;
+    font-weight: bold;
+    line-height: 100%;
+    padding: 1px 2px 1px 1px;
+    font-size: .6rem;
+    vertical-align: middle
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-info {
+    display: block;
+    float: left;
+    width: 60%;
+    padding-left: 5%;
+    box-sizing: border-box;
+    color: #FFF;
+    font-weight: bold
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-info .recommended-item-title {
+    font-size: 1rem;
+    max-height: 90%;
+    display: inline-block
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-info .recommended-item-title:hover {
+    text-decoration: underline
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations .recommended-items .recommended-item .recommended-item-info .recommended-item-showname {
+    margin-top: 2%;
+    font-size: .8rem;
+    color: #b8b8b8
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations.two-up .recommended-items {
+    padding-top: 3%
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations.two-up .recommended-items li.recommended-item:nth-child(2) {
+    display: block
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations.two-up .recommended-items .recommended-item {
+    float: left;
+    padding: 0;
+    width: 50%
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations.two-up .recommended-items .recommended-item:nth-child(odd) {
+    padding-right: 3%
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations.two-up .recommended-items .recommended-item:nth-child(even) {
+    padding-left: 3%
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations.two-up .recommended-items .recommended-item .recommended-item-link {
+    width: 100%
+}
+
+.cbc-caffeine-container .cbc-caffeine-player .recommendations.two-up .recommended-items .recommended-item .recommended-item-info {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 3%
+}
+
+.cbc-caffeine-container .live-placeholder {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding-top: 15%
+}
+
+.cbc-caffeine-container .live-placeholder .metadata-large {
+    margin: 24px 0;
+    font-size: 24px;
+    line-height: 24px
+}
+
+.cbc-caffeine-container .live-placeholder .metadata-small {
+    margin: 14px 0;
+    font-size: 14px;
+    line-height: 14px
+}
+
+.cbc-caffeine-container .live-placeholder .animation-container {
+    display: inline-block
+}
+
+.cbc-caffeine-container .live-placeholder .animation-container:after {
+    display: block;
+    overflow: hidden;
+    content: '⋯';
+    font-size: 72px;
+    line-height: 72px;
+    animation: typingEffect 3s steps(3) infinite
+}
+
+@keyframes typingEffect {
+    0% {
+        width: 0
+    }
+    66% {
+        width: 100%
+    }
+}
+
+.cbc-caffeine-container .live-placeholder.attempting-live-stream .animation-container:after {
+    animation-duration: .5s
+}
+
+.cbc-caffeine-container[data-player="barista-video"] {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    transition: height .25s;
+    margin: auto
+}
+
+.cbc-caffeine-container[data-player="barista-video"] .cbc-caffeine-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.cbc-caffeine-container[data-player="barista-video"] .cbc-caffeine-player .playbackelement, .cbc-caffeine-container[data-player="barista-video"] .cbc-caffeine-player .playbackelement video {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%
+}
+
+.cbc-caffeine-container[data-player="barista-video"] .cbc-caffeine-player.media-focused {
+    cursor: none
+}
+
+.cbc-caffeine-container .caf-video {
+    position: relative;
+    color: #fff;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5)
+}
+
+.cbc-caffeine-container .caf-video svg {
+    pointer-events: none
+}
+
+.cbc-caffeine-container .caf-video svg path, .cbc-caffeine-container .caf-video svg rect, .cbc-caffeine-container .caf-video svg circle {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5))
+}
+
+.cbc-caffeine-container .caf-video svg .foreground {
+    fill: rgba(255, 255, 255, 0.85)
+}
+
+.cbc-caffeine-container .caf-video svg .background {
+    fill: transparent
+}
+
+.cbc-caffeine-container .caf-video button {
+    font-size: 0;
+    background: none;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer
+}
+
+.cbc-caffeine-container .caf-video button svg {
+    height: 100%;
+    width: 100%
+}
+
+.cbc-caffeine-container .caf-video button label {
+    color: #fff
+}
+
+.cbc-caffeine-container .caf-video button:focus svg .foreground, .cbc-caffeine-container .caf-video button:hover svg .foreground {
+    fill: #fff
+}
+
+.cbc-caffeine-container .caf-video button.captions-off svg .background {
+    fill: #E60606
+}
+
+.cbc-caffeine-container .caf-video a {
+    color: #fff;
+    text-decoration: none;
+    border: none
+}
+
+.cbc-caffeine-container .caf-video a:hover, .cbc-caffeine-container .caf-video a:focus {
+    text-decoration: underline;
+    outline: 0
+}
+
+.cbc-caffeine-container .caf-video li {
+    color: #fff
+}
+
+.cbc-caffeine-container .caf-video button:focus, .cbc-caffeine-container .caf-video input:focus {
+    outline: 2px solid #E60606
+}
+
+.cbc-caffeine-container .caf-video button:focus::-moz-focus-inner, .cbc-caffeine-container .caf-video input:focus::-moz-focus-inner {
+    border: 0
+}
+
+.cbc-caffeine-container .caf-video button:focus::-moz-focus-outer, .cbc-caffeine-container .caf-video input:focus::-moz-focus-outer {
+    border: 0
+}
+
+.cbc-caffeine-container .caf-video div.loading {
+    display: flex;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color .33s;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none
+}
+
+[data-status="loading"].cbc-caffeine-container .caf-video div.loading {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.33)
+}
+
+.cbc-caffeine-container .caf-video div.loading::before, .cbc-caffeine-container .caf-video div.loading::after {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 50%;
+    content: '';
+    background: #fff
+}
+
+.cbc-caffeine-container .caf-video div.loading::before {
+    animation: loading-animation 1.15s ease-in-out infinite
+}
+
+.cbc-caffeine-container .caf-video div.loading::after {
+    animation: loading-animation 1.15s ease-in-out .58s infinite
+}
+
+@keyframes loading-animation {
+    70% {
+        transform: scale(.5)
+    }
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder {
+    width: 100%;
+    height: 100%
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .poster {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .poster button {
+    width: 100%;
+    height: 100%
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .poster button:focus {
+    border: 2px solid #E60606
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .poster button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .poster:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.75) 100%);
+    pointer-events: none;
+    min-height: 160px
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls > div {
+    margin: 1%;
+    float: left
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls > div:last-child {
+    margin-right: 0
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls > div.play-pause-stop {
+    width: 10%;
+    height: 10%;
+    min-width: 43px;
+    max-width: 66px
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls > div.title-frame {
+    width: calc(100% - 66px - 1% * 3);
+    max-width: 750px
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls h3, .cbc-caffeine-container .caf-video.caf-placeholder .controls ul, .cbc-caffeine-container .caf-video.caf-placeholder .controls li {
+    margin: 0;
+    padding: 0;
+    float: none;
+    color: #fff;
+    font-weight: bold
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls h3 {
+    font-size: 17px;
+    line-height: 22px
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls ul {
+    overflow: visible;
+    margin-top: 4px
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls li {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 10px;
+    font-size: 12px
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls li.duration {
+    border-left: 2px solid #FFFFFF;
+    padding-left: 5px
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls li button {
+    vertical-align: bottom
+}
+
+[data-type="live"].cbc-caffeine-container .caf-video.caf-placeholder .controls li.duration {
+    border-left: none;
+    margin: 2px;
+    padding: 2px 5px;
+    color: black;
+    background-color: #ffdc14;
+    text-transform: uppercase;
+    text-shadow: none;
+    letter-spacing: .33px
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls button svg {
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 25%
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls .play-pause-stop button {
+    position: relative;
+    padding-top: 100%;
+    width: 100%;
+    height: 100%
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls .play-pause-stop button svg {
+    margin-top: -100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls .play-pause-stop button svg .foreground {
+    fill: transparent;
+    filter: none;
+    transition: fill .3s
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder .controls .play-pause-stop button svg .background {
+    fill: rgba(255, 255, 255, 0.7);
+    filter: none;
+    transition: fill .3s
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder:hover .controls h3, .cbc-caffeine-container .caf-video.caf-placeholder:focus .controls h3, .cbc-caffeine-container .caf-video.caf-placeholder:focus-within .controls h3 {
+    text-decoration: underline
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder:hover .controls .play-pause-stop button svg .foreground, .cbc-caffeine-container .caf-video.caf-placeholder:focus .controls .play-pause-stop button svg .foreground, .cbc-caffeine-container .caf-video.caf-placeholder:focus-within .controls .play-pause-stop button svg .foreground {
+    fill: #E60606
+}
+
+.cbc-caffeine-container .caf-video.caf-placeholder:hover .controls .play-pause-stop button svg .background, .cbc-caffeine-container .caf-video.caf-placeholder:focus .controls .play-pause-stop button svg .background, .cbc-caffeine-container .caf-video.caf-placeholder:focus-within .controls .play-pause-stop button svg .background {
+    fill: #fff
+}
+
+.cbc-caffeine-container .caf-video.caf-controls {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity .2s
+}
+
+.cbc-caffeine-container .caf-video.caf-controls > div {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box
+}
+
+.cbc-caffeine-container .caf-video.caf-controls > div.title-bar {
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))
+}
+
+.cbc-caffeine-container .caf-video.caf-controls > div.control-rack {
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%)
+}
+
+.cbc-caffeine-container .caf-video.caf-controls .controls-left {
+    float: left
+}
+
+.cbc-caffeine-container .caf-video.caf-controls .controls-right {
+    float: right
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.title-bar {
+    padding: 2%;
+    pointer-events: auto
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.title-bar .controls-left {
+    max-width: calc(100% - 60px)
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.title-bar .controls-right {
+    width: 60px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.title-bar h3 {
+    margin: 0;
+    font-size: 17px;
+    color: #fff
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.title-bar span.content-area, .cbc-caffeine-container .caf-video.caf-controls div.title-bar span.air-date {
+    font-size: 13px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.title-bar span.content-area:last-child:before, .cbc-caffeine-container .caf-video.caf-controls div.title-bar span.air-date:last-child:before {
+    content: ' | '
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.title-bar button.share {
+    padding: 12px;
+    width: 60px;
+    height: 72px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.title-bar button.share label {
+    font-size: 11px;
+    font-weight: bold
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack {
+    z-index: 1;
+    padding: 78px 2% 2px;
+    height: 112px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack > * {
+    pointer-events: auto
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack .controls-left > *, .cbc-caffeine-container .caf-video.caf-controls div.control-rack .controls-right > * {
+    float: left
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack button {
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    box-sizing: content-box;
+    position: relative;
+    overflow: visible
+}
+
+@keyframes tooltipHover {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px)
+    }
+    5% {
+        opacity: 1;
+        transform: translateY(-50px)
+    }
+    95% {
+        opacity: 1;
+        transform: translateY(-50px)
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-40px)
+    }
+}
+
+@keyframes tooltipFocus {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px)
+    }
+    5% {
+        opacity: 1;
+        transform: translateY(-50px)
+    }
+    95% {
+        opacity: 1;
+        transform: translateY(-50px)
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-40px)
+    }
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack button label {
+    display: block;
+    position: absolute;
+    padding: 8px;
+    border-radius: 4px;
+    background: #263238;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+    transform: translateY(0);
+    opacity: 0;
+    pointer-events: none
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack button:focus label, .cbc-caffeine-container .caf-video.caf-controls div.control-rack button:hover label {
+    animation: tooltipFocus 4s;
+    z-index: 1;
+    bottom: 0
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack button .tooltip-next {
+    padding: 2px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack button:focus label, .cbc-caffeine-container .caf-video.caf-controls div.control-rack button:hover .tooltip-next {
+    animation: tooltipFocus 8s
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack button .next-window {
+    width: 264px;
+    overflow: hidden
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack button .next-window .next-thumbnail {
+    position: relative;
+    float: left;
+    border-radius: 2px;
+    overflow: hidden
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack button .next-window .next-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack button .next-window .next-thumbnail .next-duration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #263238;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px 3px 6px;
+    margin: 4px;
+    border-radius: 4px;
+    z-index: 1
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack button .next-window .next-video-details {
+    float: left;
+    margin-left: 4px;
+    width: 120px;
+    text-align: left;
+    font-size: 11px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack button .next-window .next-video-details .next-text {
+    color: #A8ADAF;
+    line-height: .2;
+    padding: 10px 0px;
+    font-weight: bold
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack button .next-window .next-video-details .next-title {
+    white-space: normal;
+    overflow-wrap: break-word;
+    overflow: hidden
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack:focus-within:hover button:focus label {
+    animation: none
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack:focus-within:hover button:hover label {
+    animation: tooltipHover 4s
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack .controls-left button label {
+    left: 0
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack .controls-right button label {
+    right: 0
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack .metadata-timeinfo {
+    margin-left: 8px;
+    line-height: 32px;
+    font-size: 13px;
+    font-weight: bold
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack .metadata-timeinfo .current-time {
+    float: left;
+    opacity: .9
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack .metadata-timeinfo .current-time:not(:empty)::after {
+    content: '/';
+    margin: 0 4px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack .metadata-timeinfo .duration {
+    float: left;
+    opacity: .85
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek {
+    position: absolute;
+    bottom: 26px;
+    width: calc(100% - 2% * 2);
+    padding: 12px 0;
+    transition: top .2s
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek > .controls-seek-inner {
+    position: relative;
+    height: 4px;
+    transition: height .2s
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek > .controls-seek-inner > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek > .controls-seek-inner > output {
+    display: none;
+    top: -32px;
+    width: auto;
+    height: auto;
+    padding: 4px;
+    border-radius: 4px;
+    background: #263238;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+    pointer-events: none
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress, .cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek input[type="range"] {
+    border: none;
+    background: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress.timeline {
+    opacity: .3;
+    color: #fff
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress.timeline::-webkit-progress-value {
+    background: #fff
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress.timeline::-moz-progress-bar {
+    background: #fff
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress.timeline::-ms-fill {
+    background: #fff
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress.buffer {
+    opacity: .3;
+    color: #fff
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress.buffer::-webkit-progress-value {
+    background: #fff
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress.buffer::-moz-progress-bar {
+    background: #fff
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress.buffer::-ms-fill {
+    background: #fff
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress.playback {
+    color: #E60606
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress.playback::-webkit-progress-value {
+    background: #E60606
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress.playback::-moz-progress-bar {
+    background: #E60606
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress.playback::-ms-fill {
+    background: #E60606
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress:not([max]), .cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress[max="0"] {
+    display: none
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress:indeterminate, .cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress:not([value]) {
+    display: block;
+    opacity: 1;
+    background: repeating-linear-gradient(45deg, rgba(71, 89, 99, 0.5), rgba(71, 89, 99, 0.5) 10px, #576d7b 10px, #576d7b 20px)
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress:indeterminate::-webkit-progress-bar, .cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress:not([value])::-webkit-progress-bar {
+    background: none
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress:indeterminate::-webkit-progress-value, .cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress:not([value])::-webkit-progress-value {
+    background: none
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress:indeterminate::-moz-progress-bar, .cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress:not([value])::-moz-progress-bar {
+    background: none
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress:indeterminate::-ms-fill, .cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress:not([value])::-ms-fill {
+    background: none;
+    animation-name: none
+}
+
+[data-status="playing"].cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress:indeterminate, [data-status="playing"].cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek progress:not([value]) {
+    animation: animatedbuffer 1s linear infinite
+}
+
+@keyframes animatedbuffer {
+    from {
+        background-position: -56px 0
+    }
+    to {
+        background-position: 0 0
+    }
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    border: none;
+    background: transparent;
+    background-color: transparent;
+    color: transparent
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek input[type="range"]::-moz-range-track {
+    border: none;
+    background: transparent;
+    background-color: transparent;
+    color: transparent
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek input[type="range"]::-ms-track, .cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek input[type="range"]::-ms-fill-upper, .cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek input[type="range"]::-ms-fill-lower {
+    border: none;
+    background: transparent;
+    background-color: transparent;
+    color: transparent
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek input[type="range"]::-ms-thumb {
+    background: #E60606;
+    border: none;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    transform: translateX(-4px);
+    transition: width .2s, height .2s
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #E60606;
+    border: none;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    transform: translateX(-4px);
+    transition: width .2s, height .2s
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek input[type="range"]::-moz-range-thumb {
+    background: #E60606;
+    border: none;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    transform: translateX(-4px);
+    transition: width .2s, height .2s
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek:focus-within > .controls-seek-inner {
+    height: 6px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek:focus-within > .controls-seek-inner input[type="range"]::-ms-thumb {
+    width: 14px;
+    height: 14px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek:focus-within > .controls-seek-inner input[type="range"]::-webkit-slider-thumb {
+    width: 14px;
+    height: 14px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek:focus-within > .controls-seek-inner input[type="range"]::-moz-range-thumb {
+    width: 14px;
+    height: 14px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek:hover > .controls-seek-inner {
+    height: 6px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek:hover > .controls-seek-inner input[type="range"]::-ms-thumb {
+    width: 14px;
+    height: 14px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek:hover > .controls-seek-inner input[type="range"]::-webkit-slider-thumb {
+    width: 14px;
+    height: 14px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek:hover > .controls-seek-inner input[type="range"]::-moz-range-thumb {
+    width: 14px;
+    height: 14px
+}
+
+.cbc-caffeine-container .caf-video.caf-controls div.control-rack div.controls-seek input[type="range"]:hover + output {
+    display: block
+}
+
+.cbc-caffeine-container .media-focused .caf-video.caf-controls {
+    opacity: 0
+}
+
+.cbc-caffeine-container .caf-video.caf-indicators {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.cbc-caffeine-container .caf-video.caf-indicators svg {
+    display: none;
+    animation: indicatorFlash .3s 1;
+    border-radius: 50%
+}
+
+.cbc-caffeine-container .caf-video.caf-indicators svg .background {
+    fill: rgba(38, 50, 56, 0.66)
+}
+
+@keyframes indicatorFlash {
+    0% {
+        opacity: 1;
+        transform: scale(.75)
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.25)
+    }
+}
+
+.cbc-caffeine-container .close-button {
+    display: block;
+    -webkit-appearance: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2%;
+    border: 0;
+    padding: 4px;
+    z-index: 1;
+    border-radius: 16px;
+    background-color: #fff
+}
+
+.cbc-caffeine-container .close-button svg, .cbc-caffeine-container .close-button label {
+    display: inline;
+    vertical-align: middle
+}
+
+.cbc-caffeine-container .close-button svg {
+    width: 24px;
+    height: 24px
+}
+
+.cbc-caffeine-container .close-button svg path {
+    fill: #263238
+}
+
+.cbc-caffeine-container .close-button label {
+    display: none;
+    color: #263238;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-transform: uppercase
+}
+
+.cbc-caffeine-container .close-button:hover, .cbc-caffeine-container .close-button:focus {
+    cursor: pointer
+}
+
+.cbc-caffeine-container .close-button:hover label, .cbc-caffeine-container .close-button:focus label {
+    display: inline
+}
+
+.cbc-caffeine-container[data-status="error"] {
+    display: none
+}
+
+.cbc-caffeine-error-container:empty {
+    display: none
+}
+
+.cbc-caffeine-error-container .cbc-caffeine-error {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5%;
+    color: #fff
+}
+
+.cbc-caffeine-error-container .cbc-caffeine-error p {
+    margin-bottom: 0
+}
+
+.cbc-caffeine-error-container .cbc-caffeine-error .error-retry {
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    margin: 10px 0 0 0
+}
+
+.cbc-caffeine-error-container .cbc-caffeine-error strong {
+    padding-left: 20px;
+    background-size: 15px
+}
+
+.cbc-caffeine-error-container .cbc-caffeine-error a {
+    color: red
+}
+
+.cbc-caffeine-playlist {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color: #fff
+}
+
+.cbc-caffeine-playlist ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+.cbc-caffeine-playlist ul .clips {
+    position: relative;
+    width: 100%;
+    background-color: #fff
+}
+
+.cbc-caffeine-playlist ul .clips .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.cbc-caffeine-playlist ul .clips .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown
+}
+
+.cbc-caffeine-playlist ul .clips .item {
+    color: #000;
+    clear: both;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #ccc;
+    border-left: 0;
+    margin: 0;
+    padding: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: left;
+    background-color: #fff;
+    font-size: 1em
+}
+
+.cbc-caffeine-playlist ul .clips .item.fadeInDown {
+    opacity: 1
+}
+
+.cbc-caffeine-playlist ul .clips .item:hover, .cbc-caffeine-playlist ul .clips .item:focus {
+    background-color: #e8e8e8
+}
+
+.cbc-caffeine-playlist ul .clips .item:hover .media-control .play-icon, .cbc-caffeine-playlist ul .clips .item:focus .media-control .play-icon {
+    background-image: url('data:image/svg+xml;charset=UTF-8, %3Csvg x%3D%220%22 y%3D%220%22 viewBox%3D%220 0 48 48%22 width%3D%22100%25%22 height%3D%22100%25%22 xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath d%3D%22M0 0h48v48H0z%22 fill%3D%22none%22%2F%3E%3Cpath fill%3D%22%23095092%22 d%3D%22M20 33l12-9-12-9v18zm4-29C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z%22%2F%3E%3C%2Fsvg%3E')
+}
+
+.cbc-caffeine-playlist ul .clips .item.active {
+    border-left: 3px solid #095092
+}
+
+.cbc-caffeine-playlist ul .clips .item.active .media-control .play-icon {
+    background-image: url('data:image/svg+xml;charset=UTF-8, %3Csvg x%3D%220%22 y%3D%220%22 viewBox%3D%220 0 48 48%22 width%3D%22100%25%22 height%3D%22100%25%22 xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath d%3D%22M0 0h48v48H0z%22 fill%3D%22none%22%2F%3E%3Cpath fill%3D%22%23095092%22 d%3D%22M20 33l12-9-12-9v18zm4-29C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z%22%2F%3E%3C%2Fsvg%3E')
+}
+
+.cbc-caffeine-playlist ul .clips .item .media-control {
+    position: relative;
+    display: block;
+    float: left;
+    padding-right: 20px
+}
+
+.cbc-caffeine-playlist ul .clips .item .media-control .play-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url('data:image/svg+xml;charset=UTF-8, %3Csvg x%3D%220%22 y%3D%220%22 viewBox%3D%220 0 48 48%22 width%3D%22100%25%22 height%3D%22100%25%22 xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath d%3D%22M0 0h48v48H0z%22 fill%3D%22none%22%2F%3E%3Cpath d%3D%22M20 33l12-9-12-9v18zm4-29C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    border: none;
+    background-size: 34px;
+    cursor: pointer;
+    margin: 0
+}
+
+.cbc-caffeine-playlist ul .clips .item .media-control .runtime {
+    display: block;
+    width: 100%;
+    text-align: center
+}
+
+.cbc-caffeine-playlist ul .clips .item .media-info {
+    position: relative;
+    overflow: hidden;
+    display: block
+}
+
+.cbc-caffeine-playlist ul .clips .item .media-info .thumbnail-image {
+    width: 220px;
+    height: 124px;
+    float: left;
+    overflow: hidden;
+    margin-right: 15px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAAB8CAYAAAACRt5vAAAFQElEQVR42u3dOU+UbRTG8fOJFFBiMKgNjRRWhi/gghoBCTCy7ygIsgqCG7gCijQ0lsbOTnsTExMqSw0hFF7mmWQSM3mFl+Uc5yH/k/w6loSTK8PM/dzn2MWLFwUghl26dEkAYtjly5cFIIZduXJFAGLY1atXBSCGXbt2TQBi2PXr1wUghtXU1AhADKutrRWAGFZXVycAMay+vl4AYhA4IDJwDQ0NAhDDGhsbBSCGNTU1CUAMy2QyAhDDmpubBSCGtbS0CEAMa21tFYAY1tbWJgAxrKOjQwBiWGdnpwDEsK6uLgGIYd3d3QIQw3p6egQghvX29gpADOvv7xeAGDYwMCAAMezWrVsCEMMGBwcFIIYNDQ0JQAy7c+eOAMSw4eFhAYhhIyMjAhDD7t69KwAxbGxsTABi2Pj4uADEsImJCQGIYZOTkwIQw+7duycAMWx6elrwk7aiZ75sZmZG8JO2ome+bHZ2VvCTtqJnvmxubk7wk7aiZ74IXHDgjhw5UlAIXHDgHj58KPhJW+DomS979OiR4CdtgaNnvuzx48eCn/w6evRoQckveubL5ufnBT9pCxw982ULCwuCn/wqKioqKPlFz3zZ06dPBT9pCxw982XPnj0T/Ow2cOXl5Xr//r3Onj37TwJHz3zZixcvBD/5VVxcvK1Tp05lv+7nz5/ZKU8lJSU7fs9+5Bc982UvX74U/Ow1cLn69OmTqqqqwgJHz3zZq1evBD/7DVxSW1tb2UPTEydOuAeOnvmyxcVFwU9+Jf8ibue/Aperr1+/6sKFCzv+jN3IL3rmy5aWlgQ/uw3c6dOnt324+NevX3r79m326zwCR8982fLysuDnoAOXq+/fvyuTyRx44OiZL3vz5o3gJ7+OHTu2rTNnzuzqOk3uCGGnn/s3+UXPfNnKyorgxztwSf348SM7t760tHTfgaNnvix5PwA/+XX8+PFt7SVwufr8+XP2CGGn3/Gn/KJnvmx1dVXwExm43BHCgwcPVFZWtqfA0TNfvMIdole4P0OXLP/jFa4AX+H4vzr97+H+rI8fP+r8+fO8hyvU93B8cpTuTylztb6+nj0m4FPKAv+U8vXr14Kf3Qbu/57D5WpzczN7df/kyZMHcixAz3xx8J3Sg++kPnz4oHPnznHwnaaDb/4I6Qvct2/fVFtb6/JoFz1zDhwPlKbn4eWNjY3sQojk1gAPL6f04WWuTBT+9Zyk3r17p8rKSq7npP16DpcCC/sC6pcvX1RdXc0F1MNyAZVr74U5YiF5PnJ0dDR7OM2IhUM0YuH58+eCn70Ebm1tTRUVFa5B+1vg6JkvpnYV2NSufz0mj545T+1iViBzKZlLGTiXkmm4TF5m8nLg5GXmvbNbgN0CgbsFnjx5IvhJW+DomS/WVbGuinVVkeuqWJLHQkYWMgYuZGQNbOzK4UIveua8cjiZfwE/aSt65svm5uYEP2kreubLZmdnBT9pK3rmy+7fvy8AMWxmZkYAYtj09LQAxLCpqSkBiGGTk5MCEIPAAZGBm5iYEIAYNj4+LgAxbGxsTABiWDIZCkAMGxkZEYAYNjw8LAAxLFnGDiCGDQ0NCUAMS3ZBA4hht2/fFoAYBA6IDNzAwIAAxLD+/n4BiGF9fX0CEMN6e3sFIIb19PQIQAzr7u4WgBjW1dUlADGss7NTAGJYR0eHAMSw9vZ2AYhhbW1tAhDDWltbBSCGtbS0CEAMa25uFoAYdvPmTQGIYZlMRgBiWFNTkwDEsMbGRgGIYQ0NDQIQw+rr6wUght24cUMAYhA4IDJwdXV1AhDjN3yybOxt+vWQAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat
+}
+
+.cbc-caffeine-playlist ul .clips .item .media-info .thumbnail-image img {
+    width: 220px
+}
+
+.cbc-caffeine-playlist ul .clips .item .media-info .title {
+    font-weight: bold;
+    display: block;
+    color: #095092
+}
+
+.cbc-caffeine-playlist ul .clips .item .media-info .description {
+    display: block;
+    font-size: 85%;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.cbc-caffeine-playlist ul .clips .item .media-info .showname {
+    display: none
+}
+
+.cbc-caffeine-playlist ul .clips .item .media-info .airdate {
+    display: block
+}
+
+.cbc-caffeine-playlist ul .clips .delete {
+    position: absolute;
+    top: 0;
+    right: 15px
+}
+
+.cbc-caffeine-playlist:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.cbc-caffeine-dock-placeholder {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000
+}
+
+.cbc-caffeine-dock-placeholder img {
+    position: relative;
+    top: -2%;
+    left: -2%;
+    width: 104%;
+    -webkit-filter: blur(5px);
+    filter: blur(5px)
+}
+
+.cbc-caffeine-dock-placeholder .dock-placeholder-ui {
+    position: absolute;
+    bottom: 10px;
+    right: 10px
+}
+
+.cbc-caffeine-dock-placeholder .dock-placeholder-ui button {
+    float: left;
+    color: #616161;
+    padding: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 40px;
+    border: none;
+    margin: 0 0 0 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.75)
+}
+
+.cbc-caffeine-dock-placeholder .dock-placeholder-ui button:hover, .cbc-caffeine-dock-placeholder .dock-placeholder-ui button:focus {
+    background-color: rgba(201, 44, 60, 0.75)
+}
+
+.cbc-caffeine-dock-placeholder .dock-placeholder-ui button:focus span {
+    display: block;
+    position: absolute;
+    background: #fff;
+    height: auto;
+    font-size: .75rem;
+    font-weight: 300;
+    top: -1.4rem;
+    white-space: nowrap;
+    width: auto;
+    padding: .2rem;
+    text-transform: none;
+    z-index: 5;
+    -moz-animation: tooltipAnimation 0s ease-in 4s forwards;
+    -webkit-animation: tooltipAnimation 0s ease-in 4s forwards;
+    -o-animation: tooltipAnimation 0s ease-in 4s forwards;
+    animation: tooltipAnimation 0s ease-in 4s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes tooltipAnimation {
+    to {
+        width: 0;
+        height: 0;
+        visibility: hidden
+    }
+}
+
+.cbc-caffeine-dock-placeholder .dock-placeholder-ui button svg {
+    max-width: 40px;
+    max-height: 40px;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.cbc-caffeine-dock-placeholder .dock-placeholder-ui button svg .background {
+    fill: transparent
+}
+
+.cbc-caffeine-dock-placeholder .dock-placeholder-ui button svg .foreground {
+    fill: #e6e6e6
+}
+
+.cbc-caffeine-container[data-player="barista-video"][data-status="ready"].docked .playbackelement {
+    display: block
+}
+
+.cbc-caffeine-container[data-player="barista-video"]:not([data-status="ready"]).docked .caf-video.caf-controls {
+    background-image: none !important
+}
+
+.cbc-caffeine-container[data-player="barista-video"].docked {
+    z-index: 1;
+    display: block;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    top: auto;
+    left: auto;
+    width: 320px;
+    max-width: 33%;
+    height: 180px;
+    padding: 0;
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5)
+}
+
+.cbc-caffeine-container[data-player="barista-video"].docked .cbc-caffeine-ads-container.advertisement .ads-message {
+    display: none
+}
+
+.cbc-caffeine-container[data-player="barista-video"].docked .caf-video.caf-controls {
+    background-size: contain
+}
